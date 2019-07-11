@@ -1,0 +1,413 @@
+  [1m[35m (480.7ms)[0m  [1m[35mCREATE DATABASE "splurty_development" ENCODING = 'unicode'[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (249.3ms)[0m  [1m[35mCREATE DATABASE "splurty_test" ENCODING = 'unicode'[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/bin/rake:23
+Started GET "/" for 10.0.2.2 at 2019-07-04 04:01:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 23ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 04:10:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 2514ms (Views: 2455.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (201.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(516282671649025260)[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/bin/rake:23
+Migrating to CreateQuotes (20190707044220)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (23.6ms)[0m  [1m[35mCREATE TABLE "quotes" ("id" bigserial primary key, "saying" character varying, "author" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190707044220_create_quotes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190707044220"]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-07 04:43:26.655604"], ["updated_at", "2019-07-07 04:43:26.655604"]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(516282671649025260)[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/bin/rake:23
+Started GET "/" for 10.0.2.2 at 2019-07-07 04:50:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.5ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 960ms (Views: 880.6ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 04:50:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.4ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 361ms (Views: 303.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 04:51:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.5ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 302ms (Views: 249.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 04:51:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.5ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 351ms (Views: 290.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 04:52:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.7ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 368ms (Views: 314.3ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuote Create (1.6ms)[0m  [1m[32mINSERT INTO "quotes" ("saying", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["saying", "Work like there is someone working twenty-four hours a day to take it all away from you."], ["author", "Mark Cuban"], ["created_at", "2019-07-07 04:56:22.628903"], ["updated_at", "2019-07-07 04:56:22.628903"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuote Create (1.3ms)[0m  [1m[32mINSERT INTO "quotes" ("saying", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["saying", "You're better off with a kick-ass half than a half-assed whole."], ["author", "David Heinemeier Hansson"], ["created_at", "2019-07-07 04:57:32.319727"], ["updated_at", "2019-07-07 04:57:32.319727"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 10.0.2.2 at 2019-07-07 04:57:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.7ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 432ms (Views: 285.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 04:58:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.9ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 355ms (Views: 311.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 04:59:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.5ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 365ms (Views: 307.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 05:00:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.3ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 307ms (Views: 262.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 05:00:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.6ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 330ms (Views: 278.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 05:00:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.7ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 321ms (Views: 271.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 05:00:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.7ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 358ms (Views: 292.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 05:00:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.7ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 377ms (Views: 319.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 05:01:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 362ms (Views: 306.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 05:01:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.4ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 364ms (Views: 306.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 05:02:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.5ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 331ms (Views: 284.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 05:02:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (5.2ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 362ms (Views: 295.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 05:02:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (1.3ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 309ms (Views: 265.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 05:02:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.4ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 335ms (Views: 286.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 05:03:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.4ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 306ms (Views: 257.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 05:04:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.6ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 400ms (Views: 343.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-07 05:04:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+  [1m[36mQuote Load (0.6ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 392ms (Views: 330.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-08 22:44:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by QuotesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/src/splurty/app/controllers/quotes_controller.rb:3)
+  [1m[36mQuote Load (2.4ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 977ms (Views: 866.1ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-08 22:44:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/src/splurty/app/controllers/quotes_controller.rb:3)
+  [1m[36mQuote Load (0.5ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 335ms (Views: 278.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-08 22:44:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/src/splurty/app/controllers/quotes_controller.rb:3)
+  [1m[36mQuote Load (0.5ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 341ms (Views: 274.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-08 22:44:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/src/splurty/app/controllers/quotes_controller.rb:3)
+  [1m[36mQuote Load (0.9ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 316ms (Views: 262.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-08 22:46:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/src/splurty/app/controllers/quotes_controller.rb:3)
+  [1m[36mQuote Load (0.4ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 351ms (Views: 303.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-08 22:47:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/src/splurty/app/controllers/quotes_controller.rb:3)
+  [1m[36mQuote Load (1.1ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 308ms (Views: 248.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-08 22:48:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/src/splurty/app/controllers/quotes_controller.rb:3)
+  [1m[36mQuote Load (1.0ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 327ms (Views: 264.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-08 22:53:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/src/splurty/app/controllers/quotes_controller.rb:3)
+  [1m[36mQuote Load (0.7ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 366ms (Views: 308.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-08 22:53:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/src/splurty/app/controllers/quotes_controller.rb:3)
+  [1m[36mQuote Load (0.7ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 330ms (Views: 281.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-08 22:53:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/src/splurty/app/controllers/quotes_controller.rb:3)
+  [1m[36mQuote Load (0.6ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 344ms (Views: 284.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-08 22:53:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuotesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/src/splurty/app/controllers/quotes_controller.rb:3)
+  [1m[36mQuote Load (0.7ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 360ms (Views: 297.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-10 01:23:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (21.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by QuotesController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/src/splurty/app/controllers/quotes_controller.rb:3)
+  [1m[36mQuote Load (13.2ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:3
+  Rendering quotes/index.html.erb within layouts/application
+  Rendered quotes/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 1811ms (Views: 1631.5ms | ActiveRecord: 23.0ms)
+
+
